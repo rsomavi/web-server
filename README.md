@@ -60,7 +60,6 @@ make tests
 
 ```bash
 make check_server   # Run server with Valgrind
-make check_mundo    # Run tests with Valgrind
 ```
 
 ## Running the Server
