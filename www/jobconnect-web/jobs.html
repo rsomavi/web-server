@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - JobConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Job<span>Connect</span></a>
+            <ul class="nav-links">
+                <li><a href="jobs.html" class="active">Jobs</a></li>
+                <li><a href="post-job.html" class="nav-cta">Post a Job</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header"><h1>Browse Job Opportunities</h1></div>
+    <div class="container">
+        <div class="featured-section">
+            <h2 class="section-title"><span class="featured-badge">Featured</span> Hot Jobs</h2>
+            <div class="card-grid">
+                <div class="job-card" data-location="remote" data-type="full-time">
+                    <div class="job-header">
+                        <div><h3 class="job-title">Senior React Developer</h3><p class="job-company">TechStart Inc.</p></div>
+                        <span class="job-badge">Hot</span>
+                    </div>
+                    <div class="job-meta">
+                        <span class="job-meta-item">&#128205; Remote</span>
+                        <span class="job-meta-item">&#128188; Full-time</span>
+                        <span class="job-meta-item">$120k - $150k</span>
+                    </div>
+                    <p class="job-description">Join our team to build cutting-edge web applications using React and TypeScript. Work with a talented team on innovative projects.</p>
+                    <a href="job-detail.html" class="btn btn-primary">View Details</a>
+                </div>
+                <div class="job-card" data-location="new-york" data-type="full-time">
+                    <div class="job-header">
+                        <div><h3 class="job-title">Backend Engineer</h3><p class="job-company">DataFlow Systems</p></div>
+                        <span class="job-badge">Hot</span>
+                    </div>
+                    <div class="job-meta">
+                        <span class="job-meta-item">&#128205; New York, NY</span>
+                        <span class="job-meta-item">&#128188; Full-time</span>
+                        <span class="job-meta-item">$130k - $160k</span>
+                    </div>
+                    <p class="job-description">Build scalable microservices using Python and Go. Work on high-traffic systems processing millions of requests daily.</p>
+                    <a href="job-detail.html" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="filters">
+            <div class="filters-form">
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="searchInput" placeholder="Search jobs..." aria-label="Search jobs">
+                </div>
+                <select id="locationFilter" class="filter-select" aria-label="Filter by location">
+                    <option value="">All Locations</option>
+                    <option value="remote">Remote</option>
+                    <option value="new-york">New York, NY</option>
+                    <option value="san-francisco">San Francisco, CA</option>
+                    <option value="austin">Austin, TX</option>
+                    <option value="seattle">Seattle, WA</option>
+                </select>
+                <select id="typeFilter" class="filter-select" aria-label="Filter by job type">
+                    <option value="">All Types</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-grid" id="jobsGrid">
+            <div class="job-card" data-location="san-francisco" data-type="full-time">
+                <div class="job-header">
+                    <div><h3 class="job-title">Full Stack Developer</h3><p class="job-company">CloudBase Solutions</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; San Francisco, CA</span>
+                    <span class="job-meta-item">&#128188; Full-time</span>
+                    <span class="job-meta-item">$110k - $140k</span>
+                </div>
+                <p class="job-description">Work on our cloud platform using Node.js, React, and AWS. Great benefits and collaborative environment.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="job-card" data-location="remote" data-type="contract">
+                <div class="job-header">
+                    <div><h3 class="job-title">UI/UX Designer</h3><p class="job-company">DesignHub Agency</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; Remote</span>
+                    <span class="job-meta-item">&#128188; Contract</span>
+                    <span class="job-meta-item">$60 - $80/hr</span>
+                </div>
+                <p class="job-description">Create beautiful user interfaces for web and mobile applications. Portfolio required.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="job-card" data-location="austin" data-type="full-time">
+                <div class="job-header">
+                    <div><h3 class="job-title">DevOps Engineer</h3><p class="job-company">InfraTech Corp</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; Austin, TX</span>
+                    <span class="job-meta-item">&#128188; Full-time</span>
+                    <span class="job-meta-item">$115k - $145k</span>
+                </div>
+                <p class="job-description">Manage Kubernetes clusters and CI/CD pipelines. Work with cutting-edge infrastructure tools.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="job-card" data-location="seattle" data-type="full-time">
+                <div class="job-header">
+                    <div><h3 class="job-title">Data Scientist</h3><p class="job-company">AI Innovations</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; Seattle, WA</span>
+                    <span class="job-meta-item">&#128188; Full-time</span>
+                    <span class="job-meta-item">$125k - $160k</span>
+                </div>
+                <p class="job-description">Build machine learning models and analyze complex datasets. PhD preferred.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="job-card" data-location="remote" data-type="part-time">
+                <div class="job-header">
+                    <div><h3 class="job-title">WordPress Developer</h3><p class="job-company">WebAgency Plus</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; Remote</span>
+                    <span class="job-meta-item">&#128188; Part-time</span>
+                    <span class="job-meta-item">$40 - $55/hr</span>
+                </div>
+                <p class="job-description">Build custom WordPress themes and plugins. Flexible hours and great team.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="job-card" data-location="new-york" data-type="full-time">
+                <div class="job-header">
+                    <div><h3 class="job-title">Product Manager</h3><p class="job-company">FinTech Solutions</p></div>
+                </div>
+                <div class="job-meta">
+                    <span class="job-meta-item">&#128205; New York, NY</span>
+                    <span class="job-meta-item">&#128188; Full-time</span>
+                    <span class="job-meta-item">$130k - $170k</span>
+                </div>
+                <p class="job-description">Lead product strategy for our financial products. MBA or equivalent experience required.</p>
+                <a href="job-detail.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        <div class="pagination">
+            <span class="active">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div><h3>JobConnect</h3><p>Connecting talent with opportunity since 2020.</p></div>
+            <div><h3>Quick Links</h3><ul class="footer-links"><li><a href="jobs.html">Jobs</a></li><li><a href="post-job.html">Post a Job</a></li></ul></div>
+            <div><h3>For Candidates</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="candidates.html">Candidates</a></li><li><a href="upload.html">Upload CV</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 JobConnect. All rights reserved.</div>
+    </footer>
+    <script>
+        document.getElementById("searchInput").addEventListener("input",filterJobs);
+        document.getElementById("locationFilter").addEventListener("change",filterJobs);
+        document.getElementById("typeFilter").addEventListener("change",filterJobs);
+        function filterJobs(){var e=document.getElementById("searchInput").value.toLowerCase(),t=document.getElementById("locationFilter").value,n=document.getElementById("typeFilter").value;document.querySelectorAll(".job-card").forEach((function(r){var o=r.querySelector(".job-title").textContent.toLowerCase(),a=r.dataset.location,s=r.dataset.type,c=e&&!o.includes(e)?"none":"block",l=t&&t!==a?"none":c,i=n&&n!==s?"none":l;r.style.display=i}))}
+    </script>
+</body>
+</html>

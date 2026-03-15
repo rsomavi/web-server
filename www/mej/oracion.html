@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oración del Día - MEJ Madrid</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">MEJ Madrid</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="descubrenos.html">Descúbrenos</a></li>
+                    <li><a href="mej.html">¿Qué es MEJ?</a></li>
+                    <li><a href="oracion.html" class="active">Oración</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="https://instagram.com/mej.madrid" target="_blank" rel="noopener" class="social-link" aria-label="Síguenos en Instagram">📷</a>
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="section-title">Oración del Día</h1>
+        <section class="prayer-section">
+            <div class="prayer-card">
+                <p class="prayer-date" id="prayerDate">Lunes, 2 de Marzo de 2026</p>
+                <h2 class="prayer-title">Oración por la Paz</h2>
+                <p class="prayer-text">
+                    Señor Dios de paz,<br><br>
+                    Tú que eres la fuente de toda paz y concordia,<br>
+                    te pedimos que bendigas a nuestra comunidad del MEJ.<br><br>
+                    Enséñanos a vivir en fraternidad,<br>
+                    a respetar las diferencias,<br>
+                    y a construir puentes de unidad entre todos.<br><br>
+                    Que tu amor pacifique nuestros corazones<br>
+                    y nos dé la fuerza de servirte con alegría.<br><br>
+                    Amén.
+                </p>
+            </div>
+            <div class="prayer-nav">
+                <button onclick="changeDay(-1)" aria-label="Oración anterior">← Anterior</button>
+                <button onclick="changeDay(1)" aria-label="Siguiente oración">Siguiente →</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>MEJ Madrid</h3>
+                <p>Movimiento Eucarístico Juvenil es un grupo de jóvenes católicos que se reúnen para compartir la fe, la oración y la amistad en un ambiente joyful y acogedor.</p>
+            </div>
+            <div>
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="descubrenos.html">Descúbrenos</a></li>
+                    <li><a href="mej.html">¿Qué es MEJ?</a></li>
+                    <li><a href="oracion.html">Oración</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Síguenos</h3>
+                <p><a href="https://instagram.com/mej.madrid" target="_blank" rel="noopener">@mej.madrid</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 MEJ Madrid. Todos los derechos reservados.</div>
+    </footer>
+    <script>
+        const prayers = [
+            "Oración por la Paz",
+            "Oración de Mañana",
+            "Oración de Gratitud",
+            "Oración por los Jóvenes",
+            "Oración Eucarística",
+            "Oración de Fuerza",
+            "Oración de Esperanza"
+        ];
+        
+        let currentDay = 0;
+        
+        const dateEl = document.getElementById("prayerDate");
+        const titleEl = document.querySelector(".prayer-title");
+        const textEl = document.querySelector(".prayer-text");
+        
+        const texts = [
+            "Señor Dios de paz, Tú que eres la fuente de toda paz y concordia, te pedimos que bendigas a nuestra comunidad del MEJ. Enséñanos a vivir en fraternidad, a respetar las diferencias, y a construir puentes de unidad entre todos. Que tu amor pacifique nuestros corazones y nos dé la fuerza de servirte con alegría. Amén.",
+            "Dios nuestro, que nos has creado a tu imagen y semblance, gracias por este nuevo día. Guía nuestros pasos, ilumina nuestras mentes y calienta nuestros corazones con tu presencia. Que hoy podamos ser luz para quienes nos rodean. Amén.",
+            "Padre celestial, te damos gracias por todos los dones que nos has concedido. Gracias por la vida, la salud, la familia y los amigos. Ayúdanos a ser agradecidos y a compartir tu amor con quienes nos rodean. Amén.",
+            "Señor de los jóvenes, guía a los jóvenes del MEJ en su camino de fe. Danles fuerza en los momentos de dificultad, alegría en los momentos de prueba y esperanza en los momentos de oscuridad. Que encuentren en ti su mejor amigo. Amén.",
+            "Jesús eucarístico, presencia real en nuestra vida, gracias por quedarte con nosotros. En cada misa, en cada comunión, renuevas tu amor. Ayúdanos a recibirte con devoción y a vivir tu presencia en nuestro diario vivir. Amén.",
+            "Dios de fortaleza, en momentos de debilidad tú nos sostienes. Cuando todo parece difícil, tú nos das fuerzas. Ayúdanos a confiar en ti y a descubrir que en nuestra debilidad tu poder se perfecciona. Amén.",
+            "Señor de la esperanza, en medio de las tormentas de la vida, tú eres nuestro refugio. Cuando todo parece oscuro, enciendes en nosotros la luz de la esperanza. No nos abandones nunca. Amén."
+        ];
+        
+        function changeDay(dir) {
+            currentDay = (currentDay + dir + 7) % 7;
+            const d = new Date();
+            d.setDate(d.getDate() + currentDay);
+            const opts = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+            dateEl.textContent = d.toLocaleDateString("es-ES", opts);
+            titleEl.textContent = prayers[currentDay];
+            textEl.innerHTML = texts[currentDay].replace(/\n/g, "<br><br>");
+        }
+    </script>
+</body>
+</html>

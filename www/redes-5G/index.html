@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Telecommunication Networks - Exploring modern connectivity technologies"
+		/>
+		<title>Telecommunication Networks</title>
+		<style>
+			:root {
+				--primary: #0a1628;
+				--secondary: #1e3a5f;
+				--accent: #00d4ff;
+				--accent-dark: #0099cc;
+				--text: #e8f4f8;
+				--text-muted: #8ba3b8;
+				--card-bg: #122a45;
+				--border: #1e3a5f;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family:
+					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+					Oxygen, Ubuntu, sans-serif;
+				background: var(--primary);
+				color: var(--text);
+				line-height: 1.6;
+			}
+
+			header {
+				background: linear-gradient(
+					135deg,
+					var(--secondary) 0%,
+					var(--primary) 100%
+				);
+				border-bottom: 1px solid var(--border);
+				padding: 1rem 2rem;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			nav {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: var(--accent);
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2rem;
+				list-style: none;
+			}
+
+			.nav-links a {
+				color: var(--text);
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			.nav-links a:hover {
+				color: var(--accent);
+			}
+
+			main {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+
+			.hero {
+				text-align: center;
+				padding: 4rem 2rem;
+				background: linear-gradient(
+					180deg,
+					var(--secondary) 0%,
+					var(--primary) 100%
+				);
+				border-radius: 1rem;
+				margin-bottom: 3rem;
+			}
+
+			.hero h1 {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+				background: linear-gradient(90deg, var(--accent), #00ff88);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.hero p {
+				font-size: 1.25rem;
+				color: var(--text-muted);
+				max-width: 600px;
+				margin: 0 auto;
+			}
+
+			.section-title {
+				font-size: 2rem;
+				margin-bottom: 2rem;
+				color: var(--accent);
+				border-left: 4px solid var(--accent);
+				padding-left: 1rem;
+			}
+
+			.tech-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+				margin-bottom: 4rem;
+			}
+
+			.card {
+				background: var(--card-bg);
+				border: 1px solid var(--border);
+				border-radius: 0.75rem;
+				overflow: hidden;
+				transition:
+					transform 0.3s,
+					box-shadow 0.3s;
+			}
+
+			.card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 32px rgba(0, 212, 255, 0.15);
+			}
+
+			.card img {
+				width: 100%;
+				height: 180px;
+				object-fit: cover;
+				background: var(--secondary);
+			}
+
+			.card-content {
+				padding: 1.5rem;
+			}
+
+			.card h3 {
+				color: var(--accent);
+				margin-bottom: 0.75rem;
+				font-size: 1.25rem;
+			}
+
+			.card p {
+				color: var(--text-muted);
+				font-size: 0.95rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.tech-form {
+				border-top: 1px solid var(--border);
+				padding-top: 1rem;
+			}
+
+			.tech-form label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-size: 0.9rem;
+				color: var(--text-muted);
+			}
+
+			.tech-form input,
+			.tech-form select {
+				width: 100%;
+				padding: 0.75rem;
+				margin-bottom: 0.75rem;
+				background: var(--primary);
+				border: 1px solid var(--border);
+				border-radius: 0.375rem;
+				color: var(--text);
+				font-size: 0.95rem;
+			}
+
+			.tech-form input:focus,
+			.tech-form select:focus {
+				outline: none;
+				border-color: var(--accent);
+			}
+
+			.tech-form button {
+				width: 100%;
+				padding: 0.75rem;
+				background: var(--accent);
+				color: var(--primary);
+				border: none;
+				border-radius: 0.375rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+
+			.tech-form button:hover {
+				background: var(--accent-dark);
+			}
+
+			.status-section {
+				margin-bottom: 4rem;
+			}
+
+			.status-table {
+				width: 100%;
+				border-collapse: collapse;
+				background: var(--card-bg);
+				border-radius: 0.75rem;
+				overflow: hidden;
+			}
+
+			.status-table th,
+			.status-table td {
+				padding: 1rem;
+				text-align: left;
+				border-bottom: 1px solid var(--border);
+			}
+
+			.status-table th {
+				background: var(--secondary);
+				color: var(--accent);
+				font-weight: 600;
+			}
+
+			.status-table tr:last-child td {
+				border-bottom: none;
+			}
+
+			.status-table tr:hover td {
+				background: rgba(0, 212, 255, 0.05);
+			}
+
+			.status-ok {
+				color: #00ff88;
+			}
+
+			.status-warning {
+				color: #ffaa00;
+			}
+
+			footer {
+				background: var(--secondary);
+				padding: 2rem;
+				text-align: center;
+				border-top: 1px solid var(--border);
+			}
+
+			footer p {
+				color: var(--text-muted);
+				margin-bottom: 0.5rem;
+			}
+
+			footer a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+
+			@media (max-width: 768px) {
+				.hero h1 {
+					font-size: 2rem;
+				}
+
+				.nav-links {
+					display: none;
+				}
+
+				.status-table {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">TeleNet</div>
+				<ul class="nav-links">
+					<li><a href="#technologies">Technologies</a></li>
+					<li><a href="#status">Network Status</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<h1>Telecommunication Networks</h1>
+				<p>
+					Exploring the cutting-edge technologies that power global
+					connectivity. From 5G to fiber optics, discover how modern
+					networks enable instant communication worldwide.
+				</p>
+			</section>
+
+			<section id="technologies">
+				<h2 class="section-title">Network Technologies</h2>
+				<div class="tech-grid">
+					<article class="card">
+						<img
+							src="/redes-5G/images/5g.jpg"
+							alt="5G Network Tower"
+						/>
+						<div class="card-content">
+							<h3>5G Networks</h3>
+							<p>
+								Fifth-generation wireless technology delivers
+								ultra-fast speeds, low latency, and massive
+								device connectivity for smart cities and IoT
+								applications.
+							</p>
+							<form
+								class="tech-form"
+								action="/analyze"
+								method="POST"
+							>
+								<label for="name-5g">Your Name</label>
+								<input
+									type="text"
+									id="name-5g"
+									name="username"
+									placeholder="Enter your name"
+									required
+								/>
+								<label for="tech-5g">Favorite Technology</label>
+								<select id="tech-5g" name="technology" required>
+									<option value="">Select technology</option>
+									<option value="5g">5G Networks</option>
+									<option value="fiber">Fiber Optics</option>
+									<option value="routing">
+										Network Routing
+									</option>
+									<option value="satellite">
+										Satellite Communications
+									</option>
+								</select>
+								<button type="submit">Analyze</button>
+							</form>
+						</div>
+					</article>
+
+					<article class="card">
+						<img
+							src="/redes-5G/images/fiber.jpg"
+							alt="Fiber Optic Cables"
+						/>
+						<div class="card-content">
+							<h3>Fiber Optics</h3>
+							<p>
+								Light-speed data transmission through optical
+								fibers enables terabit-level bandwidth with
+								minimal signal loss over long distances.
+							</p>
+							<form
+								class="tech-form"
+								action="/analyze"
+								method="POST"
+							>
+								<label for="name-fiber">Your Name</label>
+								<input
+									type="text"
+									id="name-fiber"
+									name="username"
+									placeholder="Enter your name"
+									required
+								/>
+								<label for="tech-fiber"
+									>Favorite Technology</label
+								>
+								<select
+									id="tech-fiber"
+									name="technology"
+									required
+								>
+									<option value="">Select technology</option>
+									<option value="5g">5G Networks</option>
+									<option value="fiber">Fiber Optics</option>
+									<option value="routing">
+										Network Routing
+									</option>
+									<option value="satellite">
+										Satellite Communications
+									</option>
+								</select>
+								<button type="submit">Analyze</button>
+							</form>
+						</div>
+					</article>
+
+					<article class="card">
+						<img
+							src="/redes-5G/images/routing.jpg"
+							alt="Network Routing Equipment"
+						/>
+						<div class="card-content">
+							<h3>Network Routing</h3>
+							<p>
+								Intelligent packet forwarding across
+								interconnected networks uses dynamic routing
+								protocols to optimize paths and ensure reliable
+								data delivery.
+							</p>
+							<form
+								class="tech-form"
+								action="/analyze"
+								method="POST"
+							>
+								<label for="name-routing">Your Name</label>
+								<input
+									type="text"
+									id="name-routing"
+									name="username"
+									placeholder="Enter your name"
+									required
+								/>
+								<label for="tech-routing"
+									>Favorite Technology</label
+								>
+								<select
+									id="tech-routing"
+									name="technology"
+									required
+								>
+									<option value="">Select technology</option>
+									<option value="5g">5G Networks</option>
+									<option value="fiber">Fiber Optics</option>
+									<option value="routing">
+										Network Routing
+									</option>
+									<option value="satellite">
+										Satellite Communications
+									</option>
+								</select>
+								<button type="submit">Analyze</button>
+							</form>
+						</div>
+					</article>
+
+					<article class="card">
+						<img
+							src="/redes-5G/images/satellite.jpg"
+							alt="Satellite Communication"
+						/>
+						<div class="card-content">
+							<h3>Satellite Communications</h3>
+							<p>
+								Space-based relay systems provide global
+								coverage, enabling connectivity in remote areas
+								and supporting worldwide broadcast and data
+								services.
+							</p>
+							<form
+								class="tech-form"
+								action="/analyze"
+								method="POST"
+							>
+								<label for="name-satellite">Your Name</label>
+								<input
+									type="text"
+									id="name-satellite"
+									name="username"
+									placeholder="Enter your name"
+									required
+								/>
+								<label for="tech-satellite"
+									>Favorite Technology</label
+								>
+								<select
+									id="tech-satellite"
+									name="technology"
+									required
+								>
+									<option value="">Select technology</option>
+									<option value="5g">5G Networks</option>
+									<option value="fiber">Fiber Optics</option>
+									<option value="routing">
+										Network Routing
+									</option>
+									<option value="satellite">
+										Satellite Communications
+									</option>
+								</select>
+								<button type="submit">Analyze</button>
+							</form>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="status" class="status-section">
+				<h2 class="section-title">Network Status</h2>
+				<table class="status-table">
+					<thead>
+						<tr>
+							<th>Node</th>
+							<th>Location</th>
+							<th>Latency</th>
+							<th>Bandwidth</th>
+							<th>Packet Loss</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>NYC-EXCHANGE-01</td>
+							<td>New York, NY</td>
+							<td>12ms</td>
+							<td>100 Gbps</td>
+							<td>0.01%</td>
+							<td class="status-ok">● Online</td>
+						</tr>
+						<tr>
+							<td>LON-CORE-02</td>
+							<td>London, UK</td>
+							<td>45ms</td>
+							<td>80 Gbps</td>
+							<td>0.02%</td>
+							<td class="status-ok">● Online</td>
+						</tr>
+						<tr>
+							<td>TYO-EDGE-03</td>
+							<td>Tokyo, JP</td>
+							<td>89ms</td>
+							<td>50 Gbps</td>
+							<td>0.05%</td>
+							<td class="status-ok">● Online</td>
+						</tr>
+						<tr>
+							<td>SYD-RELAY-04</td>
+							<td>Sydney, AU</td>
+							<td>156ms</td>
+							<td>25 Gbps</td>
+							<td>0.12%</td>
+							<td class="status-warning">● Degraded</td>
+						</tr>
+						<tr>
+							<td>FRA-GATEWAY-05</td>
+							<td>Frankfurt, DE</td>
+							<td>28ms</td>
+							<td>95 Gbps</td>
+							<td>0.01%</td>
+							<td class="status-ok">● Online</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+
+		<footer id="contact">
+			<p>&copy; 2026 Telecommunication Networks. All rights reserved.</p>
+			<p>
+				Contact:
+				<a href="mailto:info@telenet.example.com"
+					>info@telenet.example.com</a
+				>
+			</p>
+		</footer>
+
+		<script>
+			document.querySelectorAll(".tech-form").forEach(form => {
+				form.addEventListener("submit", e => {
+					console.log("Form submitted to", form.action);
+				});
+			});
+		</script>
+	</body>
+</html>

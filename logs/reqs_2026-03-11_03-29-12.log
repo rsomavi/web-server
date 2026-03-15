@@ -1,0 +1,7 @@
+[Wed, 11 Mar 2026 02:29:33 GMT] "GET /index.html HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 02:29:34 GMT] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 214
+[Wed, 11 Mar 2026 02:30:15 GMT] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 214
+[Wed, 11 Mar 2026 02:30:49 GMT] "GET /../hola/hola/hola/../../../../../../index.html HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 02:37:51 GMT] "GET /scripts/test.py HTTP/1.1" 200 316
+[Wed, 11 Mar 2026 02:37:53 GMT] "GET /scripts/hola.py HTTP/1.1" 200 203
+[Wed, 11 Mar 2026 02:38:28 GMT] "GET /scripts/hola.py?a=;cat&b=/etc/passwd&c=mundo HTTP/1.1" 200 197

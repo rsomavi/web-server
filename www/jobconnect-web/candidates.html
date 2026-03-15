@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates - JobConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Job<span>Connect</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="candidates.html" class="active">Candidates</a></li>
+                <li><a href="upload.html" class="nav-cta">Upload CV</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header"><h1>Browse Candidates</h1></div>
+    <div class="container">
+        <div class="filters">
+            <div class="filters-form">
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="searchInput" placeholder="Search by name or skill..." aria-label="Search candidates">
+                </div>
+                <select id="roleFilter" class="filter-select" aria-label="Filter by role">
+                    <option value="">All Roles</option>
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="manager">Product Manager</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-grid" id="candidatesGrid">
+            <div class="candidate-card" data-role="frontend">
+                <div class="candidate-header">
+                    <img src="images/users/user1.svg" alt="Sarah Johnson" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Sarah Johnson</h3><p class="candidate-role">Frontend Developer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 5 years experience</div>
+                    <div class="candidate-detail">&#128205; San Francisco, CA</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">CSS</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="backend">
+                <div class="candidate-header">
+                    <img src="images/users/user2.svg" alt="Michael Chen" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Michael Chen</h3><p class="candidate-role">Backend Developer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 7 years experience</div>
+                    <div class="candidate-detail">&#128205; New York, NY</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="fullstack">
+                <div class="candidate-header">
+                    <img src="images/users/user3.svg" alt="Emily Rodriguez" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Emily Rodriguez</h3><p class="candidate-role">Full Stack Developer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 4 years experience</div>
+                    <div class="candidate-detail">&#128205; Austin, TX</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">MongoDB</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="designer">
+                <div class="candidate-header">
+                    <img src="images/users/user4.svg" alt="David Kim" class="candidate-avatar">
+                    <div class="candidate-info"><h3>David Kim</h3><p class="candidate-role">UI/UX Designer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 6 years experience</div>
+                    <div class="candidate-detail">&#128205; Seattle, WA</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Figma</span><span class="tag">Sketch</span><span class="tag">Adobe XD</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="frontend">
+                <div class="candidate-header">
+                    <img src="images/users/user5.svg" alt="Jessica Lee" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Jessica Lee</h3><p class="candidate-role">Frontend Developer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 3 years experience</div>
+                    <div class="candidate-detail">&#128205; Los Angeles, CA</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Vue.js</span><span class="tag">JavaScript</span><span class="tag">SASS</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="manager">
+                <div class="candidate-header">
+                    <img src="images/users/user6.svg" alt="Robert Taylor" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Robert Taylor</h3><p class="candidate-role">Product Manager</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 8 years experience</div>
+                    <div class="candidate-detail">&#128205; Chicago, IL</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Agile</span><span class="tag">Scrum</span><span class="tag">Jira</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="candidate-card" data-role="backend">
+                <div class="candidate-header">
+                    <img src="images/users/user7.svg" alt="Amanda White" class="candidate-avatar">
+                    <div class="candidate-info"><h3>Amanda White</h3><p class="candidate-role">Backend Developer</p></div>
+                </div>
+                <div class="candidate-details">
+                    <div class="candidate-detail">&#128188; 5 years experience</div>
+                    <div class="candidate-detail">&#128205; Boston, MA</div>
+                </div>
+                <div class="candidate-tags"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">MySQL</span></div>
+                <a href="profile.html" class="btn btn-primary">View Profile</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div><h3>JobConnect</h3><p>Connecting talent with opportunity since 2020.</p></div>
+            <div><h3>Quick Links</h3><ul class="footer-links"><li><a href="jobconeect-web/index.html">Home</a></li><li><a href="jobconeect-web/candidates.html">Candidates</a></li><li><a href="upload.html">Upload CV</a></li></ul></div>
+            <div><h3>For Companies</h3><ul class="footer-links"><li><a href="jobconeect-web/jobs.html">Browse Jobs</a></li><li><a href="jobconeect-web/post-job.html">Post a Job</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 JobConnect. All rights reserved.</div>
+    </footer>
+    <script>
+        document.getElementById("searchInput").addEventListener("input",filterCandidates);
+        document.getElementById("roleFilter").addEventListener("change",filterCandidates);
+        function filterCandidates(){var e=document.getElementById("searchInput").value.toLowerCase(),t=document.getElementById("roleFilter").value;document.querySelectorAll(".candidate-card").forEach((function(n){var r=n.querySelector("h3").textContent.toLowerCase(),o=n.dataset.role,s=e&&!r.includes(e)?"none":"block",a=t&&t!==o?"none":s;n.style.display=a}))}
+    </script>
+</body>
+</html>

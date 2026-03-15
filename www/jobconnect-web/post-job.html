@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - JobConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Job<span>Connect</span></a>
+            <ul class="nav-links">
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="post-job.html" class="active nav-cta">Post a Job</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header"><h1>Post a Job</h1></div>
+    <div class="container">
+        <div class="form-container">
+            <form method="POST" action="/submit-job">
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" required placeholder="Enter company name">
+                </div>
+                <div class="form-group">
+                    <label for="position">Position Title</label>
+                    <input type="text" id="position" name="position" required placeholder="e.g., Senior Developer">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Remote, New York, NY">
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary Range</label>
+                    <input type="text" id="salary" name="salary" required placeholder="e.g., $80k - $120k">
+                </div>
+                <div class="form-group">
+                    <label for="description">Job Description</label>
+                    <textarea id="description" name="description" required placeholder="Describe the role, responsibilities, and requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Job Posting</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div><h3>JobConnect</h3><p>Connecting talent with opportunity since 2020.</p></div>
+            <div><h3>Quick Links</h3><ul class="footer-links"><li><a href="jobs.html">Jobs</a></li><li><a href="post-job.html">Post a Job</a></li></ul></div>
+            <div><h3>For Candidates</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="candidates.html">Candidates</a></li><li><a href="upload.html">Upload CV</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 JobConnect. All rights reserved.</div>
+    </footer>
+</body>
+</html>

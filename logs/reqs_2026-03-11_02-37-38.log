@@ -1,0 +1,7 @@
+[Wed, 11 Mar 2026 01:37:49 GMT] "GET /scripts/test.py?variableGET=hola HTTP/1.1" 200 321
+[Wed, 11 Mar 2026 01:38:00 GMT] "GET /scripts/test.py?variableGET=hola+mundo+GET&asdflkjasdf=239487 HTTP/1.1" 200 323
+[Wed, 11 Mar 2026 01:38:10 GMT] "GET / HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 01:38:13 GMT] "GET /scripts/test.php?variableGET=hola+mundo+GET HTTP/1.1" 200 313
+[Wed, 11 Mar 2026 01:38:15 GMT] "GET /media/video.mpeg HTTP/1.1" 404 214
+[Wed, 11 Mar 2026 01:38:17 GMT] "GET /IMPORTANTE.txt HTTP/1.1" 404 214
+[Wed, 11 Mar 2026 01:38:36 GMT] "GET /hola HTTP/1.1" 400 237

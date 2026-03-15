@@ -1,0 +1,7 @@
+[Wed, 11 Mar 2026 10:04:42 GMT] "GET /index.html HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 10:04:42 GMT] "GET / HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 10:04:42 GMT] "GET /no_existe.html HTTP/1.1" 404 214
+[Wed, 11 Mar 2026 10:04:44 GMT] "POST /scripts/test.py HTTP/1.1" 200 321
+[Wed, 11 Mar 2026 10:05:45 GMT] "GET /index.html HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 10:05:45 GMT] "GET / HTTP/1.1" 200 3858
+[Wed, 11 Mar 2026 10:05:45 GMT] "GET /no_existe.html HTTP/1.1" 404 214

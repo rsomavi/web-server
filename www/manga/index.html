@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo sobre mangas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        header { background: #2c3e50; color: #fff; padding: 1rem; }
+        nav { background: #34495e; padding: 0.5rem 1rem; }
+        nav a { color: #fff; text-decoration: none; margin-right: 1.5rem; }
+        nav a:hover { text-decoration: underline; }
+        main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        h1 { color: #2c3e50; margin-bottom: 1rem; }
+        .form-section { background: #f8f9fa; padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
+        .form-section input[type="text"] { padding: 0.5rem; width: 200px; margin-right: 0.5rem; }
+        .form-section button { padding: 0.5rem 1rem; background: #3498db; color: #fff; border: none; cursor: pointer; }
+        .form-section button:hover { background: #2980b9; }
+        #greeting { margin-top: 1rem; font-weight: bold; color: #27ae60; }
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Todo sobre mangas</h1>
+    </header>
+    <nav>
+        <a href="/manga/index.html">Home</a>
+        <a href="/manga/catalog.html">Catalog</a>
+        <a href="/manga/about.html">About</a>
+    </nav>
+    <main>
+        <section class="form-section">
+            <h2>Personaliza tu experiencia</h2>
+            <form action="/personalize" method="POST">
+                <label for="username">Tu nombre:</label>
+                <input type="text" id="username" name="username" placeholder="Ingresa tu nombre">
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="greeting"></div>
+        </section>
+        <section>
+            <h2>Bienvenido a Todo sobre mangas</h2>
+            <p>Somos tu destino número uno para descubrir el fascinante mundo del manga. Desde clásicos japoneses hasta las últimas novedades, tenemos algo para cada lector. Explora nuestro catálogo y sumérgete en historias increíbles.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Todo sobre mangas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

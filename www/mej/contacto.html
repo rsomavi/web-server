@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MEJ Madrid</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">MEJ Madrid</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="descubrenos.html">Descúbrenos</a></li>
+                    <li><a href="mej.html">¿Qué es MEJ?</a></li>
+                    <li><a href="oracion.html">Oración</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="https://instagram.com/mej.madrid" target="_blank" rel="noopener" class="social-link" aria-label="Síguenos en Instagram">📷</a>
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="section-title">Contáctanos</h1>
+        <div class="grid-3" style="margin-bottom: 3rem;">
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">📍</div>
+                <h3>Ubicación</h3>
+                <p>Parroquia Nuestra Señora de Loreto<br>Calle Alas, 22, 28042<br>Madrid, España</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">📧</div>
+                <h3>Email</h3>
+                <p>mejmadrid.loreto24@gmail.com<br>Secretaría del MEJ<br>Madrid</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">📱</div>
+                <h3>Síguenos</h3>
+                <p><a href="https://instagram.com/mej.madrid" target="_blank" rel="noopener">@mej.madrid</a><br>Instagram oficial</p>
+            </div>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje..."></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="enviarCorreo()">Enviar mensaje</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>MEJ Madrid</h3>
+                <p>Movimiento Eucarístico Juvenil es un grupo de jóvenes católicos que se reúnen para compartir la fe, la oración y la amistad en un ambiente joyful y acogedor.</p>
+            </div>
+            <div>
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="descubrenos.html">Descúbrenos</a></li>
+                    <li><a href="mej.html">¿Qué es MEJ?</a></li>
+                    <li><a href="oracion.html">Oración</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Síguenos</h3>
+                <p><a href="https://instagram.com/mej.madrid" target="_blank" rel="noopener">@mej.madrid</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 MEJ Madrid. Todos los derechos reservados.</div>
+    </footer>
+
+    <script>
+    function enviarCorreo() {
+        const nombre = document.getElementById("nombre").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        if (!nombre || !email || !mensaje) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+
+        const asunto = "Contacto desde la web MEJ Madrid";
+
+        const cuerpo =
+            "Nombre: " + nombre + "\n\n" +
+            "Email: " + email + "\n\n" +
+            "Mensaje:\n" + mensaje;
+
+        const mailtoLink =
+            "mailto:mejmadrid.loreto24@gmail.com" +
+            "?subject=" + encodeURIComponent(asunto) +
+            "&body=" + encodeURIComponent(cuerpo);
+
+        window.location.href = mailtoLink;
+    }
+    </script>
+</body>
+</html>

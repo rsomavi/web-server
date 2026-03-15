@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CV - JobConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Job<span>Connect</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="candidates.html">Candidates</a></li>
+                <li><a href="upload.html" class="active nav-cta">Upload CV</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header"><h1>Upload Your CV</h1></div>
+    <div class="container">
+        <div class="form-container">
+            <form method="POST" action="/upload-cv" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="role">Desired Role</label>
+                    <input type="text" id="role" name="role" required placeholder="e.g., Frontend Developer">
+                </div>
+                <div class="form-group">
+                    <label for="cvfile">Upload CV</label>
+                    <input type="file" id="cvfile" name="cvfile" accept=".pdf,.doc,.docx" required>
+                    <p class="form-hint">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div><h3>JobConnect</h3><p>Connecting talent with opportunity since 2020.</p></div>
+            <div><h3>Quick Links</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="candidates.html">Candidates</a></li><li><a href="upload.html">Upload CV</a></li></ul></div>
+            <div><h3>For Companies</h3><ul class="footer-links"><li><a href="jobs.html">Browse Jobs</a></li><li><a href="post-job.html">Post a Job</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 JobConnect. All rights reserved.</div>
+    </footer>
+</body>
+</html>
