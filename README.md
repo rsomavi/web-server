@@ -43,7 +43,6 @@ This compiles the server and generates the `server` binary.
 
 ```bash
 make all      # Build server (default)
-make tests    # Build test executables
 make clean    # Remove build artifacts
 ```
 
@@ -67,7 +66,7 @@ make check_mundo    # Run tests with Valgrind
 ## Running the Server
 
 ```bash
-./server server.conf
+./server
 ```
 
 The server will start listening on the configured port (default: `8080`).
